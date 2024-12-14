@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" th:href="@{/css/index.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   
+    </head>
+
+
+    <body>
+    <div class="Container">
+        <nav >
+            <nav class="image-container">
+                <ul>
+                    <li> <a class="img" href="#" ><img th:src="@{/images/logo.png}" alt="Website Logo">
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <ul class="menu">
+                
+                <li><a href="#" id="Homelink">Home</a> </li>
+                <li><a  href="#"> Phones</a></li>
+                <li><a href="#"> Accessories</a></li>
+                <li><a href="#"> Computer </a></li>
+                <li><a href="#"> Sale </a></li>
+             </ul>
+                <div class="right-group">
+                    <li><a href="#" class="fa fa-shopping-cart"></a> </li>
+                    <li><a href="#" class="fa fa-heart"></a></a> </li>
+                    <li><a href="#" class="fa fa-sign-out"></a> </li>
+
+                 </div>
+           
+        </nav>
+        
+    </div>     
+    <br>
+
+    <div class="body-container">
+
+        <section class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img th:src="@{/images/images-slider/tech_advert1.png}" alt="" id="img1">
+
+                    <img th:src="@{/images/images-slider/tech_advert2.png}" alt="" id="img2">
+
+                    <img th:src="@{/images/images-slider/tech_advert3.png}" alt="" id="img3">
+                    <img th:src="@{/images/images-slider/tech_advert4.png}" alt="" id="img4">
+                </div>
+
+
+
+
+
+            </div>
+            
+        </section>
+
+
+    </div>
+    <div class="body-items">
+        <div class="product-card" th:each="product : ${products}">
+    
+            <img th:src="${product.getImage}" alt="products Image" class="product-Image">
+            <div class="product-Name" th:text="${product.name}"></div>
+            <div class="product-Price" th:text="'£' + ${product.price}"></div>
+
+
+
+        </div>
+
+    
+
+    
+
+    </div>
+
+    <script  th:src="@{/js/scripts.js}"></script>
+
+    </body>
+    </html>
