@@ -65,9 +65,9 @@
     </div>
     <div class="body-items">
         <div class="product-card" th:each="product : ${products}">
-    
-            <img th:src="${product.getImage}" alt="products Image" class="product-Image">
-            <div class="product-Name" th:text="${product.name}"></div>
+            <div class="discount-circle">10% OFF</div>
+            <img th:src="@{/images/laptop.jpg}" class="product-Image">
+            <div class="product-description" th:text="${product.description}"></div>
             <div class="product-Price" th:text="'£' + ${product.price}"></div>
 
 
@@ -83,4 +83,8 @@
     <script  th:src="@{/js/scripts.js}"></script>
 
     </body>
+
+    <footer>
+        tis is footer  
+    </footer>
     </html>

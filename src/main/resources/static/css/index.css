@@ -192,16 +192,68 @@ body{
 }
 
 /* Product grid */
-.body-items{
+/* Product grid */
+.body-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
 }
-.product-card{
-    border: 1px solid;
-    border-radius: 8px;
+
+/* Product Card */
+.product-card {
+    position: relative; /* To enable absolute positioning for the discount circle */
     padding: 16px;
+    border: 4px solid rgb(255, 255, 255);
+    background-color: #fff;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-Image{
+    width: 100%;
+    height: 200px;object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Discount Circle Styling */
+.discount-circle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff0000; /* Red circle */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.product-Price {
+
+    padding-top: 20px;
+    display: block;
+
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.product-description{
+    font-size: 10px;
+    color: #555;
+}
+.product-card:hover {
+    transform: scale(1.05); /* Scale up the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
 }

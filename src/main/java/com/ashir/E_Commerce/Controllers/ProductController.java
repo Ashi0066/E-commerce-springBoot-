@@ -44,11 +44,7 @@ public class ProductController
         return productService.getProductsNoDTO();
     }
 
-    @GetMapping(path = "/products/id/{id}")
-    public ProductGetDTO getProductByID(@PathVariable Long id){
-       return productService.getOneProduct(id);
-    }
-
+           
     @GetMapping(path = "/products/name/{name}")
     public ProductGetDTO getProductByName(@PathVariable String name){
         return productService.getProductByName(name);
